@@ -1,0 +1,41 @@
+{
+  "name": "hexsweep",
+  "version": "0.1.0",
+  "description": "Find hardcoded colors that should be design tokens — the raw #hex / rgb() that escaped your token migration. Comment- and definition-aware, zero dependencies.",
+  "bin": {
+    "hexsweep": "bin/cli.js"
+  },
+  "main": "src/core.js",
+  "scripts": {
+    "test": "node --test"
+  },
+  "keywords": [
+    "hex",
+    "color",
+    "lint",
+    "linter",
+    "css",
+    "design-tokens",
+    "design-system",
+    "cli",
+    "frontend"
+  ],
+  "files": [
+    "bin",
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jjdoor/hexsweep.git"
+  },
+  "homepage": "https://github.com/jjdoor/hexsweep#readme",
+  "bugs": {
+    "url": "https://github.com/jjdoor/hexsweep/issues"
+  }
+}

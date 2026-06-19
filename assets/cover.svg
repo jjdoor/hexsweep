@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="420" viewBox="0 0 1000 420" font-family="Menlo, 'SF Mono', 'DejaVu Sans Mono', monospace">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#0d1117"/>
+      <stop offset="1" stop-color="#161b22"/>
+    </linearGradient>
+  </defs>
+
+  <rect width="1000" height="420" fill="url(#bg)"/>
+  <rect width="1000" height="420" fill="none" stroke="#30363d" stroke-width="2"/>
+
+  <!-- faint grid -->
+  <g stroke="#21262d" stroke-width="1">
+    <line x1="0" y1="105" x2="1000" y2="105"/>
+    <line x1="500" y1="0" x2="500" y2="420"/>
+    <line x1="750" y1="0" x2="750" y2="420"/>
+  </g>
+
+  <!-- faint background note -->
+  <text x="60" y="400" fill="#1d2530" font-size="14">the raw #3f82f0 that should have been var(--primary) · comment- &amp; token-aware</text>
+
+  <!-- terminal dots -->
+  <g>
+    <circle cx="936" cy="34" r="6" fill="#f85149"/>
+    <circle cx="958" cy="34" r="6" fill="#d29922"/>
+    <circle cx="980" cy="34" r="6" fill="#3fb950"/>
+  </g>
+
+  <!-- wordmark -->
+  <text x="60" y="118" font-size="64" font-weight="700" letter-spacing="-1">
+    <tspan fill="#79c0ff">hex</tspan><tspan fill="#56d364">sweep</tspan>
+  </text>
+  <text x="62" y="156" font-size="21" fill="#8b949e">find hardcoded colors that should be design tokens</text>
+
+  <!-- output panel -->
+  <rect x="48" y="190" width="904" height="158" rx="10" fill="#0d1117" stroke="#30363d" stroke-width="1.5"/>
+
+  <!-- header -->
+  <text x="68" y="220" font-size="15" fill="#6e7681">$ <tspan fill="#8b949e">hexsweep</tspan> <tspan fill="#79c0ff">src/</tspan></text>
+
+  <!-- flagged usage row -->
+  <text x="68" y="256" font-size="17"><tspan fill="#f85149">✖</tspan> <tspan fill="#6e7681">Button.tsx:14</tspan>  <tspan fill="#c9d1d9">background:</tspan> <tspan fill="#d29922">#3f82f0</tspan></text>
+  <rect x="540" y="244" width="16" height="16" rx="3" fill="#3f82f0" stroke="#30363d"/>
+  <text x="566" y="256" font-size="15" fill="#6e7681">← should be var(--primary)</text>
+
+  <!-- allowed definition row -->
+  <text x="68" y="288" font-size="17"><tspan fill="#3fb950">✓</tspan> <tspan fill="#6e7681">tokens.css:2</tspan>   <tspan fill="#c9d1d9">--primary:</tspan> <tspan fill="#d29922">#3f82f0</tspan></text>
+  <rect x="540" y="276" width="16" height="16" rx="3" fill="#3f82f0" stroke="#30363d"/>
+  <text x="566" y="288" font-size="15" fill="#56707f">token definition — allowed</text>
+
+  <!-- summary -->
+  <text x="68" y="324" font-size="15" fill="#f85149">✖ 1 hardcoded color <tspan fill="#56707f">(comments &amp; #id-selectors skipped · zero deps)</tspan></text>
+
+  <!-- install hint -->
+  <text x="60" y="372" font-size="17" fill="#58a6ff">$ npx hexsweep <tspan fill="#6e7681">·</tspan> pip install hexsweep</text>
+</svg>
